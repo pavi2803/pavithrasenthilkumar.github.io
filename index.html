@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Pavithra Senthilkumar</title>
     <style>
         * {
             margin: 0;
@@ -74,14 +74,11 @@
         }
 
         h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #1a202c;
-            border-bottom: 3px solid #4fd1c5;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #000000;
+    font-weight: 400;
+}
         h3 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
@@ -92,6 +89,145 @@
         #about {
             background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #2c5282 100%);
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(79, 209, 197, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(66, 153, 225, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(159, 122, 234, 0.1) 0%, transparent 50%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        #about > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-image {
+            flex-shrink: 0;
+        }
+
+        .profile-image img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4fd1c5;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #4fd1c5;
+            border-radius: 50%;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 25s;
+        }
+
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #4299e1;
+            top: 60%;
+            left: 80%;
+            animation-delay: 5s;
+            animation-duration: 20s;
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #9f7aea;
+            border-radius: 50%;
+            top: 70%;
+            left: 20%;
+            animation-delay: 2s;
+            animation-duration: 30s;
+        }
+
+        .shape:nth-child(4) {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #4fd1c5;
+            top: 30%;
+            left: 70%;
+            animation-delay: 8s;
+            animation-duration: 22s;
+        }
+
+        .shape:nth-child(5) {
+            width: 70px;
+            height: 70px;
+            border: 2px solid #4299e1;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            animation-delay: 3s;
+            animation-duration: 28s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(30px, -30px) rotate(90deg);
+            }
+            50% {
+                transform: translate(-20px, 20px) rotate(180deg);
+            }
+            75% {
+                transform: translate(20px, 30px) rotate(270deg);
+            }
         }
 
         #about h1, #about p {
@@ -228,6 +364,16 @@
             section {
                 padding: 4rem 1.5rem;
             }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image img {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -236,74 +382,38 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#articles">Articles</a></li>
         </ul>
     </nav>
 
     <!-- About Section -->
     <section id="about">
-        <h1>Your Name</h1>
-        <p>PhD Student | Researcher | Developer</p>
-        <p>Welcome! I'm a [your field] researcher passionate about [your interests]. I work on [brief description of your research area].</p>
-        <div class="social-links">
-            <a href="mailto:your.email@example.com">Email</a>
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            <a href="https://scholar.google.com/yourprofile" target="_blank">Google Scholar</a>
+        <div class="background-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
         </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications">
-        <h2>Publications</h2>
-        
-        <div class="publication">
-            <div class="publication-title">Paper Title: An Interesting Approach to Solving Complex Problems</div>
-            <div class="publication-authors">First Author, <strong>Your Name</strong>, Third Author</div>
-            <div class="publication-venue">Conference/Journal Name 2024</div>
-            <p>Brief description of the paper and its contributions. What problem did it solve? What were the key findings?</p>
-        </div>
-
-        <div class="publication">
-            <div class="publication-title">Another Research Paper: Novel Methods and Applications</div>
-            <div class="publication-authors"><strong>Your Name</strong>, Co-author Name</div>
-            <div class="publication-venue">Conference/Journal Name 2023</div>
-            <p>Description of this research work and its impact on the field.</p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        
-        <div class="project">
-            <h3>Project Name</h3>
-            <p>Description of the project, what it does, and what technologies were used. Explain the problem it solves and any interesting challenges you overcame.</p>
-            <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">TensorFlow</span>
-                <span class="tech-tag">React</span>
+        <div class="about-content">
+            <div class="profile-image">
+                <img src="pic.jpg" alt="Pavithra Senthilkumar">
             </div>
-        </div>
-
-        <div class="project">
-            <h3>Another Project</h3>
-            <p>Details about this project, its goals, and outcomes. What makes it unique or interesting?</p>
-            <div class="project-tech">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MongoDB</span>
-            </div>
-        </div>
-
-        <div class="project">
-            <h3>Third Project</h3>
-            <p>More information about this project and what you learned from building it.</p>
-            <div class="project-tech">
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">OpenCV</span>
+            <div class="about-text">
+                <h1>Pavithra Senthilkumar</h1>
+                <h2>Machine Learning Engineer | Data Scientist</h2>
+                <p>Hi, I’m Pavithra. I build end-to-end machine learning systems and data-driven applications that solve real-world problems. My experience includes designing predictive models, developing scalable pipelines, and creating applied AI solutions.</p>
+                <p>I’ve worked across healthcare, satellite imaging, and neuroscience, giving me a broad perspective on applying ML and software engineering principles to diverse challenges. My expertise spans machine learning, deep learning, computer vision, NLP and MLOps, enabling me to take projects from experimentation to functional prototypes efficiently.</p>
+                <p>I focus on developing robust, scalable, and maintainable systems and enjoy working in collaborative environments where I can apply my technical skills to solve complex problems!</p>
+                <div class="social-links">
+                    <a href="mailto:ps12049@usc.edu">Email</a>
+                    <a href="https://github.com/pavi2803" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/pavithra-senthilkumar-2803/" target="_blank">LinkedIn</a>
+                    <a href="https://medium.com/@pavi2468kuk" target="_blank">Medium</a>
+                </div>
             </div>
         </div>
     </section>
@@ -313,29 +423,176 @@
         <h2>Experience</h2>
         
         <div class="experience-item">
-            <h3>Position Title</h3>
-            <div class="experience-date">Company/Institution Name | Month Year - Present</div>
+            <h3>Machine Learning Researcher</h3>
+            <div class="experience-date">Keck School of Medicine, Neuroscience Imaging | October 2024 - Present</div>
             <div class="experience-description">
-                Description of your role and responsibilities. What did you accomplish? What technologies did you work with?
+                <li style="margin-bottom: 0.5rem;">Developing a multimodal cognitive decline predictor by fusing 3D MRI (Vision Transformers) with clinical features using contrastive loss, achieving RMSE 0.413 and R² 0.78.</li>
+                <li style="margin-bottom: 0.5rem;">Engineering SynthBrain, a VQ-VAE pipeline generating synthetic 3D NifTi volumes from ADNI dataset (9K+ subjects), enlarging dataset by 60% and reducing overfitting with reconstruction loss 0.0091.</li>
+                <li style="margin-bottom: 0.5rem;">Building scalable deep learning pipelines for a multimodal AI agent integrating CLIP, Mixture-of-Experts, and DeepSpeed. Applying LoRA PEFT on foundation LLMs like Mistral with FAISS RAG, improving Alzheimer's prediction accuracy to 85%.</li>
             </div>
         </div>
 
         <div class="experience-item">
-            <h3>Previous Position</h3>
-            <div class="experience-date">Company/Institution Name | Month Year - Month Year</div>
+            <h3>Data Scientist</h3>
+            <div class="experience-date">EXL Services | May 2022 - October 2023</div>
             <div class="experience-description">
-                Details about this role and your key contributions. Highlight any significant achievements or projects.
+                <li style="margin-bottom: 0.5rem;">Designed and deployed a HIPAA-compliant risk recommendation system on 1.5M+ records using Gradient Boosting (XGBoost, LightGBM), leveraging SHAP for interpretability, achieving 78% recall rate.</li>
+                <li style="margin-bottom: 0.5rem;">Collaborated with cross-functional teams to enhance an intervention prediction model by gathering and integrating key data, improving patient intervention accuracy by 20% and boosting outreach engagement rates by 65%.</li>
+                <li style="margin-bottom: 0.5rem;">Engineered automated pipelines in PySpark and Hive SQL to integrate predictive models with KPI dashboards; applied experimental design and MLflow for real-time model monitoring, driving a 5% reduction in operational costs.</li>
+                <li style="margin-bottom: 0.5rem;">Collaborated with stakeholders to translate research/clinical requirements into scalable AI tooling and internal workflows.</li>
             </div>
         </div>
 
         <div class="experience-item">
-            <h3>Earlier Position</h3>
-            <div class="experience-date">Company/Institution Name | Month Year - Month Year</div>
+            <h3>Data Analyst Internship</h3>
+            <div class="experience-date">EXL Services | December 2021 - May 2022</div>
             <div class="experience-description">
-                Information about this experience and what you learned.
+                <li style="margin-bottom: 0.5rem;">Migrated patient analytics pipelines from SAS to Hadoop ecosystem using Apache Spark and Hive SQL, processing 3M+ records and reducing manual data preparation time by 45%.</li>
+                <li style="margin-bottom: 0.5rem;">Built a classifier pipeline on healthcare data (Commercial and Medicare cohorts), achieving baseline AUC/ROC of 70% and optimized automated dashboards using VBA and Tableau for real-time reporting.</li>
             </div>
+        </div>
+
+        <div class="experience-item">
+            <h3>Software Engineer Internship</h3>
+            <div class="experience-date">Satyukt Analytics | April 2020 - October 2020</div>
+            <div class="experience-description">
+                <li style="margin-bottom: 0.5rem;">Developed a farm boundary extraction pipeline for 1,000+ satellite images using OpenCV and QGIS, performing geospatial preprocessing for scalable agricultural analysis.</li>
+                <li style="margin-bottom: 0.5rem;">Built key features of Sat2Farm Android app using Java and XML, integrating computer vision pipeline to automate farm mapping workflows for 500+ farmers in Mexico.</li>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- Publications Section -->
+    <!-- Publications Section -->
+<section id="publications">
+    <h2>Publications</h2>
+    
+    <div class="publication">
+        <div class="publication-title">
+            <a href="https://www.biorxiv.org/content/10.1101/2025.09.05.674598v1" target="_blank" style="color: #2c5282; text-decoration: none;">
+                MAVeRiC-AD: Mixture-of-experts Agentic Vision-Language Ensemble for Robust MRI Classification of Alzheimer’s Disease
+            </a>
+        </div>
+        <div class="publication-authors">Nikhil J. Dhinagar, <strong>Pavithra Senthilkumar</strong>,Sophia I. Thomopoulos, Paul M. Thompson </div>
+        <div class="publication-venue">SIPAIM 2025</div>
+        <p>Agentic vision-language ensemble for robust, multi-site Alzheimer’s disease classification from T1-weighted MRI.</p>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">
+            <a href="https://www.biorxiv.org/content/10.1101/2025.08.27.672683v1" target="_blank" style="color: #2c5282; text-decoration: none;">
+                Evaluation of Deep Learning Algorithms to Predict Multiple Dementia-Related Neuropathologies from Brain MRI, Clinical and Genetic Data
+            </a>
+        </div>
+        <div class="publication-authors">Tamoghna Chattopadhyay, <strong>Pavithra Senthilkumar</strong>, Christopher Patterson, Paul M. Thompson</div>
+        <div class="publication-venue">SIPAIM 2025</div>
+        <p>Multimodal deep learning framework for non-invasive, MRI-based prediction of six co-occurring neuropathologies in Alzheimer’s disease and related dementias.</p>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">
+            <a href="https://www.biorxiv.org/content/10.1101/2025.02.21.639520v1" target="_blank" style="color: #2c5282; text-decoration: none;">
+                Deep Learning to Predict Future Cognitive Decline: A Multimodal Approach Using Brain MRI and Clinical Data
+            </a>
+        </div>
+        <div class="publication-authors">Tamoghna Chattopadhyay, <strong>Pavithra Senthilkumar</strong>, Rahul H. Ankarath, Paul M. Thompson</div>
+        <div class="publication-venue">EMBC 2024</div>
+        <p>Multimodal deep learning model for forecasting 2-year cognitive decline by integrating brain MRI with clinical and demographic data.</p>
+    </div>
+
+
+    <div class="publication">
+        <div class="publication-title">
+            <a href="https://www.academia.edu/121519707/Migration_and_Enhancement_of_Population_Health_Monitoring_and_Tracking_Report" target="_blank" style="color: #2c5282; text-decoration: none;">
+                Migration and Enhancement of Population Health Monitoring and Tracking Report
+            </a>
+        </div>
+        <div class="publication-authors"><strong>Pavithra Senthilkumar</strong>
+        <div class="publication-venue">Internship Research Thesis</div>
+        <p>PySpark-based migration and redesign of a population health monitoring system to enable scalable, proactive, and data-driven care management.</p>
+    </div>
+</section>
+
+    <section id="projects">
+    <h2>Personal Projects</h2>
+    
+    <div class="project">
+        <h3>
+            <a href="project1.html" target="_blank">YouTube Comments Insight AI</a>
+        </h3>
+
+        <p>Short description of the project.</p>
+
+        <!-- Link to internal detailed page -->
+        <a href="https://ytinsightai.streamlit.app/" class="more-link">
+            App Link
+        </a>
+
+        <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">React</span>
+        </div>
+    </div>
+
+    <div class="project">
+        <h3>
+            <a href="project2.html" target="_blank">Lung Cancer Classification App</a>
+        </h3>
+        <p>Details about this project, its goals, and outcomes. What makes it unique or interesting?</p>
+
+        <a href="https://lungcancerdetectorct.streamlit.app/" class="more-link">
+            App Link
+        </a>
+        <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">MongoDB</span>
+        </div>
+    </div>
+
+    <div class="project">
+        <h3>
+            <a href="project3.html" target="_blank">Kidney Disease Abnormality Detection using CT Scans</a>
+        </h3>
+        <p>More information about this project and what you learned from building it.</p>
+
+        <a href="https://lungcancerdetectorct.streamlit.app/" class="more-link">
+            App Link
+        </a>
+
+        <div class="project-tech">
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">OpenCV</span>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Articles Section -->
+    <section id="articles">
+        <h2>Articles</h2>
+        
+        <div class="articles">
+            <div class="publication-title">Paper Title: An Interesting Approach to Solving Complex Problems</div>
+            <div class="publication-authors">First Author, <strong>Your Name</strong>, Third Author</div>
+            <div class="publication-venue">Conference/Journal Name 2024</div>
+            <p>Brief description of the paper and its contributions. What problem did it solve? What were the key findings?</p>
+        </div>
+
+        <div class="articles">
+            <div class="publication-title">Another Research Paper: Novel Methods and Applications</div>
+            <div class="publication-authors"><strong>Your Name</strong>, Co-author Name</div>
+            <div class="publication-venue">Conference/Journal Name 2023</div>
+            <p>Description of this research work and its impact on the field.</p>
         </div>
     </section>
+
+
 
     <script>
         // Smooth scrolling for navigation links

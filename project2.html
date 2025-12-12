@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Classification using CT Scans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-8 max-w-3xl mx-auto font-sans">
+    <h1 class="text-4xl font-bold mb-6">Lung Cancer Classification using CT Scans</h1>
+
+    <p class="text-lg mb-6">
+        An end-to-end deep learning pipeline for classifying lung cancer using CT scan images.
+        The project follows a modular ML engineering structure with components for data ingestion,
+        preprocessing, model training, evaluation, and experiment tracking.
+    </p>
+
+    <a href="https://github.com/pavi2803/Lung_Cancer_Classification_CT_Scan" target="_blank"
+       class="text-blue-600 underline text-lg mb-8 inline-block">
+        View GitHub Repository →
+    </a>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Key Features</h2>
+    <ul class="list-disc ml-6 space-y-2">
+        <li>Complete end-to-end ML pipeline design</li>
+        <li>Data ingestion, preprocessing, and validation modules</li>
+        <li>3D CT scan–based model training and evaluation</li>
+        <li>Experiment tracking and reproducibility via DVC</li>
+        <li>Config-driven architecture using YAML</li>
+        <li>Modular and scalable code structure for extensions</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Workflow</h2>
+    <ul class="list-decimal ml-6 space-y-2">
+        <li><strong>Project Initialization</strong>  
+            Template script auto-generates project folders and boilerplate files.
+        </li>
+        <li><strong>Configuration Management</strong>  
+            <code>config.yaml</code> for paths and API connections;  
+            <code>params.yaml</code> for hyperparameters.
+        </li>
+        <li><strong>Data Ingestion</strong>  
+            Handles loading CT scan images and preparing datasets.
+        </li>
+        <li><strong>Base Model Preparation</strong>  
+            Sets up the deep learning model architecture.
+        </li>
+        <li><strong>Model Training</strong>  
+            Trains on processed CT lung images.
+        </li>
+        <li><strong>Model Evaluation</strong>  
+            Evaluates performance using standard metrics.
+        </li>
+        <li><strong>Pipeline Orchestration</strong>  
+            All stages are connected through <code>main.py</code>.
+        </li>
+        <li><strong>DVC Integration</strong>  
+            <code>dvc.yaml</code> ensures reproducible experiments.
+        </li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Tech Stack</h2>
+    <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-gray-200 rounded-full">Python</span>
+        <span class="px-3 py-1 bg-gray-200 rounded-full">DVC</span>
+        <span class="px-3 py-1 bg-gray-200 rounded-full">YAML</span>
+        <span class="px-3 py-1 bg-gray-200 rounded-full">Deep Learning</span>
+        <span class="px-3 py-1 bg-gray-200 rounded-full">CT Imaging</span>
+    </div>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Getting Started</h2>
+    <ul class="list-disc ml-6 space-y-2">
+        <li>Clone the repository  
+            <code>git clone https://github.com/pavi2803/Lung_Cancer_Classification_CT_Scan.git</code>
+        </li>
+        <li>Install dependencies  
+            <code>pip install -r requirements.txt</code>
+        </li>
+        <li>Configure <code>config.yaml</code> and <code>params.yaml</code></li>
+        <li>Initialize project structure:  
+            <code>python Template.py</code>
+        </li>
+        <li>Run the pipeline:  
+            <code>python main.py</code>
+        </li>
+    </ul>
+
+    <a href="index.html" class="mt-10 inline-block text-gray-700 underline">
+        ← Back to Portfolio
+    </a>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Comments Insight AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-8 max-w-3xl mx-auto font-sans">
+    <h1 class="text-4xl font-bold mb-6">YouTube Comments Insight AI</h1>
+
+    <p class="mb-6 text-lg">
+        A Streamlit-powered web app that analyzes YouTube video comments to uncover audience sentiment,
+        extract key insights, and visualize what viewers are actually talking about. Built using
+        <strong>Hugging Face Transformers</strong>, <strong>PyTorch</strong>, <strong>KeyBERT</strong>, and
+        <strong>Streamlit</strong>.
+    </p>
+
+    <a href="https://ytinsightai.streamlit.app/" target="_blank"
+       class="text-blue-600 underline text-lg mb-8 inline-block">
+        Open Live App →
+    </a>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Key Features</h2>
+    <ul class="list-disc ml-6 space-y-2">
+        <li>No API key required — scrapes comments directly</li>
+        <li>Sentiment analysis using <code>twitter-roberta-base-sentiment</code></li>
+        <li>Keyword extraction with KeyBERT</li>
+        <li>Word cloud visualization of comment themes</li>
+        <li>Interactive charts powered by Streamlit</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Example Workflow</h2>
+    <ul class="list-decimal ml-6 space-y-2">
+        <li>Paste any YouTube video URL</li>
+        <li>App scrapes the first 200+ comments</li>
+        <li>Model predicts sentiment distribution</li>
+        <li>KeyBERT extracts meaningful keywords</li>
+        <li>Word cloud highlights dominant topics</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Technologies Used</h2>
+    <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-gray-200 rounded-full">Python</span>
+        <span class="px-3 py-1 bg-gray-200 rounded-full">PyTorch</span>
+        <span class="px-3 py-1 bg-gray-200 rounded-full">Hugging Face Transformers</span>
+        <span class="px-3 py-1 bg-gray-200 rounded-full">KeyBERT</span>
+        <span class="px-3 py-1 bg-gray-200 rounded-full">Streamlit</span>
+    </div>
+
+    <a href="index.html" class="mt-10 inline-block text-gray-700 underline">
+        ← Back to Portfolio
+    </a>
+</body>
+</html>
