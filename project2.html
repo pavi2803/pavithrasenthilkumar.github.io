@@ -1,93 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lung Cancer Classification using CT Scans</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lung Cancer Classification - Pavithra Senthilkumar</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="p-8 max-w-3xl mx-auto font-sans">
-    <h1 class="text-4xl font-bold mb-6">Lung Cancer Classification using CT Scans</h1>
-
-    <p class="text-lg mb-6">
-        An end-to-end deep learning pipeline for classifying lung cancer using CT scan images.
-        The project follows a modular ML engineering structure with components for data ingestion,
-        preprocessing, model training, evaluation, and experiment tracking.
-    </p>
-
-    <a href="https://github.com/pavi2803/Lung_Cancer_Classification_CT_Scan" target="_blank"
-       class="text-blue-600 underline text-lg mb-8 inline-block">
-        View GitHub Repository →
-    </a>
-
-    <h2 class="text-2xl font-semibold mt-8 mb-4">Key Features</h2>
-    <ul class="list-disc ml-6 space-y-2">
-        <li>Complete end-to-end ML pipeline design</li>
-        <li>Data ingestion, preprocessing, and validation modules</li>
-        <li>3D CT scan–based model training and evaluation</li>
-        <li>Experiment tracking and reproducibility via DVC</li>
-        <li>Config-driven architecture using YAML</li>
-        <li>Modular and scalable code structure for extensions</li>
-    </ul>
-
-    <h2 class="text-2xl font-semibold mt-8 mb-4">Workflow</h2>
-    <ul class="list-decimal ml-6 space-y-2">
-        <li><strong>Project Initialization</strong>  
-            Template script auto-generates project folders and boilerplate files.
-        </li>
-        <li><strong>Configuration Management</strong>  
-            <code>config.yaml</code> for paths and API connections;  
-            <code>params.yaml</code> for hyperparameters.
-        </li>
-        <li><strong>Data Ingestion</strong>  
-            Handles loading CT scan images and preparing datasets.
-        </li>
-        <li><strong>Base Model Preparation</strong>  
-            Sets up the deep learning model architecture.
-        </li>
-        <li><strong>Model Training</strong>  
-            Trains on processed CT lung images.
-        </li>
-        <li><strong>Model Evaluation</strong>  
-            Evaluates performance using standard metrics.
-        </li>
-        <li><strong>Pipeline Orchestration</strong>  
-            All stages are connected through <code>main.py</code>.
-        </li>
-        <li><strong>DVC Integration</strong>  
-            <code>dvc.yaml</code> ensures reproducible experiments.
-        </li>
-    </ul>
-
-    <h2 class="text-2xl font-semibold mt-8 mb-4">Tech Stack</h2>
-    <div class="flex flex-wrap gap-2">
-        <span class="px-3 py-1 bg-gray-200 rounded-full">Python</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">DVC</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">YAML</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">Deep Learning</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">CT Imaging</span>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-slate-800 to-slate-600 text-white py-12">
+        <div class="max-w-4xl mx-auto px-8">
+            <a href="index.html" class="text-gray-300 hover:text-white mb-4 inline-block">
+                ← Back to Portfolio
+            </a>
+            <h1 class="text-4xl font-bold mb-4">Lung Cancer Classification App</h1>
+            <p class="text-xl text-gray-200">
+                End-to-end deep learning pipeline for classifying lung cancer from CT scan images
+            </p>
+            <div class="flex gap-4 mt-6">
+                <a href="https://github.com/pavi2803/Lung_Cancer_Classification_CT_Scan" target="_blank"
+                   class="px-6 py-3 bg-white text-slate-800 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    View Code on GitHub →
+                </a>
+                <a href="https://lungcancerdetectorct.streamlit.app/" target="_blank"
+                   class="px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold hover:bg-teal-600 transition">
+                    Live Demo →
+                </a>
+            </div>
+        </div>
     </div>
 
-    <h2 class="text-2xl font-semibold mt-8 mb-4">Getting Started</h2>
-    <ul class="list-disc ml-6 space-y-2">
-        <li>Clone the repository  
-            <code>git clone https://github.com/pavi2803/Lung_Cancer_Classification_CT_Scan.git</code>
-        </li>
-        <li>Install dependencies  
-            <code>pip install -r requirements.txt</code>
-        </li>
-        <li>Configure <code>config.yaml</code> and <code>params.yaml</code></li>
-        <li>Initialize project structure:  
-            <code>python Template.py</code>
-        </li>
-        <li>Run the pipeline:  
-            <code>python main.py</code>
-        </li>
-    </ul>
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-8 py-12">
+        
+        <!-- Overview -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Overview</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                An end-to-end deep learning pipeline for classifying lung cancer using CT scan images.
+                The project follows a modular ML engineering structure with components for data ingestion,
+                preprocessing, model training, evaluation, and experiment tracking using DVC for reproducibility.
+            </p>
+        </section>
 
-    <a href="index.html" class="mt-10 inline-block text-gray-700 underline">
-        ← Back to Portfolio
-    </a>
+        <!-- Demo Images -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Demo</h2>
+            <div class="space-y-4">
+                <img src="lung_ui2.png" alt="App Interface" 
+                     class="w-full rounded-lg shadow-lg border border-gray-200" />
+                <img src="lung_ui1.png" alt="CT Scan Processing and Classification" 
+                     class="w-full rounded-lg shadow-lg border border-gray-200" />
+            </div>
+            <p class="text-sm text-gray-600 mt-2 italic">
+                Screenshots showing CT scan processing, model implementation and classification result.
+            </p>
+        </section>
+
+        <!-- Key Features -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Key Features</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">End-to-End Pipeline</h3>
+                    <p class="text-gray-600">Complete ML pipeline from data ingestion to model evaluation</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">3D CT Scan Processing</h3>
+                    <p class="text-gray-600">Handles 3D medical imaging data for accurate classification</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">DVC Integration</h3>
+                    <p class="text-gray-600">Experiment tracking and reproducibility using Data Version Control</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Config-Driven Architecture</h3>
+                    <p class="text-gray-600">YAML-based configuration for easy experimentation and deployment</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Pipeline Workflow</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <ol class="space-y-4">
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">1</span>
+                        <div>
+                            <strong class="text-gray-800">Project Initialization</strong>
+                            <p class="text-gray-600">Template script auto-generates project folders and boilerplate files</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">2</span>
+                        <div>
+                            <strong class="text-gray-800">Configuration Management</strong>
+                            <p class="text-gray-600">config.yaml for paths and API connections; params.yaml for hyperparameters</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">3</span>
+                        <div>
+                            <strong class="text-gray-800">Data Ingestion</strong>
+                            <p class="text-gray-600">Loads CT scan images and prepares datasets for training</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">4</span>
+                        <div>
+                            <strong class="text-gray-800">Model Training</strong>
+                            <p class="text-gray-600">Trains deep learning model on processed CT lung images</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">5</span>
+                        <div>
+                            <strong class="text-gray-800">Model Evaluation</strong>
+                            <p class="text-gray-600">Evaluates performance using standard medical imaging metrics</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">6</span>
+                        <div>
+                            <strong class="text-gray-800">DVC Tracking</strong>
+                            <p class="text-gray-600">dvc.yaml ensures reproducible experiments and version control</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Technical Stack -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Technologies Used</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Python</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Deep Learning</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">DVC</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">YAML</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">CT Imaging</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">MLOps</span>
+            </div>
+        </section>
+
+        <!-- Getting Started -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Getting Started</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <ol class="space-y-3 text-gray-700">
+                    <li><strong>Clone the repository:</strong><br/>
+                        <code class="bg-gray-100 px-2 py-1 rounded text-sm">git clone https://github.com/pavi2803/Lung_Cancer_Classification_CT_Scan.git</code>
+                    </li>
+                    <li><strong>Install dependencies:</strong><br/>
+                        <code class="bg-gray-100 px-2 py-1 rounded text-sm">pip install -r requirements.txt</code>
+                    </li>
+                    <li><strong>Configure parameters:</strong><br/>
+                        Edit <code class="bg-gray-100 px-2 py-1 rounded text-sm">config.yaml</code> and <code class="bg-gray-100 px-2 py-1 rounded text-sm">params.yaml</code>
+                    </li>
+                    <li><strong>Initialize project structure:</strong><br/>
+                        <code class="bg-gray-100 px-2 py-1 rounded text-sm">python Template.py</code>
+                    </li>
+                    <li><strong>Run the pipeline:</strong><br/>
+                        <code class="bg-gray-100 px-2 py-1 rounded text-sm">python main.py</code>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Impact/Results -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Impact & Results</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <ul class="space-y-2 text-gray-700">
+                    <li>Achieved 82% accuracy in lung cancer classification on CT scan images</li>
+                    <li>Modular architecture enables easy extension and experimentation</li>
+                    <li>DVC integration ensures reproducible ML experiments</li>
+                    <li>Config-driven design allows rapid hyperparameter tuning</li>
+                    <li>End-to-end pipeline reduces development time for similar projects</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
 </body>
 </html>
