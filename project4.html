@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kidney Disease Detection - Pavithra Senthilkumar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-slate-800 to-slate-600 text-white py-12">
+        <div class="max-w-4xl mx-auto px-8">
+            <a href="index.html" class="text-gray-300 hover:text-white mb-4 inline-block">
+                ← Back to Portfolio
+            </a>
+            <h1 class="text-4xl font-bold mb-4">Kidney Disease Detection using CT Scans</h1>
+            <p class="text-xl text-gray-200">
+                Deep learning application for detecting kidney disease abnormalities from CT scan images
+            </p>
+            <div class="flex gap-4 mt-6">
+                <a href="https://github.com/yourusername/kidney-disease-detection" target="_blank"
+                   class="px-6 py-3 bg-white text-slate-800 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    View Code on GitHub →
+                </a>
+                <a href="https://kidney-disease-app-latest.onrender.com/" target="_blank"
+                   class="px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold hover:bg-teal-600 transition">
+                    Live Demo →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-8 py-12">
+        
+        <!-- Overview -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Overview</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                A Streamlit web application that leverages deep learning to detect signs of kidney disease from CT scan images. 
+                Built with TensorFlow and VGG16 transfer learning, this tool serves as a supportive AI assistant for medical 
+                professionals. The application is containerized with Docker and deployed on Render with a CI/CD pipeline using GitHub Actions.
+            </p>
+        </section>
+
+        <!-- Demo Images -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Demo</h2>
+            <div class="space-y-4">
+                <img src="kidney1.png" alt="App Interface" 
+                     class="w-full rounded-lg shadow-lg border border-gray-200" />
+                <img src="kidney2.png" alt="Upload and Prediction" 
+                     class="w-full rounded-lg shadow-lg border border-gray-200" />
+            </div>
+            <p class="text-sm text-gray-600 mt-2 italic">
+                Screenshots showing the app interface, upload process, and detection results
+            </p>
+        </section>
+
+        <!-- Key Features -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Key Features</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Simple Image Upload</h3>
+                    <p class="text-gray-600">Upload kidney CT scan images in JPG or PNG format for instant analysis</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">VGG16 Transfer Learning</h3>
+                    <p class="text-gray-600">Leverages pretrained VGG16 model fine-tuned for kidney disease detection</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Docker Containerization</h3>
+                    <p class="text-gray-600">Fully containerized application for consistent deployment across environments</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">CI/CD Pipeline</h3>
+                    <p class="text-gray-600">Automated build and deployment using GitHub Actions and Docker Hub</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">How It Works</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <ol class="space-y-4">
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">1</span>
+                        <div>
+                            <strong class="text-gray-800">Upload CT Scan</strong>
+                            <p class="text-gray-600">User uploads a kidney CT scan image through the Streamlit interface</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">2</span>
+                        <div>
+                            <strong class="text-gray-800">Image Preprocessing</strong>
+                            <p class="text-gray-600">Image is resized to 224x224x3 and normalized for model input</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">3</span>
+                        <div>
+                            <strong class="text-gray-800">VGG16 Inference</strong>
+                            <p class="text-gray-600">Fine-tuned VGG16 model analyzes the scan for disease indicators</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">4</span>
+                        <div>
+                            <strong class="text-gray-800">Binary Classification</strong>
+                            <p class="text-gray-600">Model outputs prediction: No Kidney Disease or Likely Kidney Disease</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">5</span>
+                        <div>
+                            <strong class="text-gray-800">Display Results</strong>
+                            <p class="text-gray-600">Results are displayed with clear visual indicators for medical review</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Technical Architecture</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h3 class="font-semibold text-lg mb-3 text-gray-800">Model Details</h3>
+                <ul class="space-y-2 text-gray-700 mb-6">
+                    <li><strong>Base Model:</strong> VGG16 pretrained on ImageNet</li>
+                    <li><strong>Training:</strong> Fine-tuned using transfer learning on kidney CT scans</li>
+                    <li><strong>Framework:</strong> TensorFlow 2.19.0</li>
+                    <li><strong>Input Shape:</strong> 224x224x3 RGB images</li>
+                    <li><strong>Output:</strong> Binary classification (0: No disease, 1: Disease)</li>
+                </ul>
+
+                <h3 class="font-semibold text-lg mb-3 text-gray-800">Deployment Pipeline</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li><strong>Containerization:</strong> Docker with Python 3.12.7 base image</li>
+                    <li><strong>Container Registry:</strong> Docker Hub for image storage</li>
+                    <li><strong>Hosting:</strong> Render web service</li>
+                    <li><strong>CI/CD:</strong> GitHub Actions for automated build and push</li>
+                    <li><strong>Port:</strong> Application runs on port 8080</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technologies Used -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Technologies Used</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Python</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">TensorFlow</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">VGG16</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Streamlit</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Docker</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">GitHub Actions</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Render</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Docker Hub</span>
+            </div>
+        </section>
+
+        <!-- Deployment Steps -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Deployment Workflow</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <ol class="space-y-3 text-gray-700">
+                    <li><strong>Build Docker Image:</strong><br/>
+                        <code class="bg-gray-100 px-2 py-1 rounded text-sm">docker build -t pavi2803/kidney-disease-app:latest .</code>
+                    </li>
+                    <li><strong>Push to Docker Hub:</strong><br/>
+                        <code class="bg-gray-100 px-2 py-1 rounded text-sm">docker push pavi2803/kidney-disease-app:latest</code>
+                    </li>
+                    <li><strong>Deploy on Render:</strong><br/>
+                        Connect to Docker Hub image with port 8080 configuration
+                    </li>
+                    <li><strong>Automated CI/CD:</strong><br/>
+                        GitHub Actions automatically builds and pushes new images on every push to main branch
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Impact/Results -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Impact & Results</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <ul class="space-y-2 text-gray-700">
+                    <li>Achieved 95% accuracy using VGG16 transfer learning on kidney CT scan dataset</li>
+                    <li>Binary classification model for kidney disease detection from CT scans</li>
+                    <li>Deployed as accessible web application for medical professionals</li>
+                    <li>Fully automated CI/CD pipeline reduces deployment time from hours to minutes</li>
+                    <li>Docker containerization ensures consistent performance across environments</li>
+                    <li>Serves as a supportive AI tool to assist in medical decision-making</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
