@@ -16,14 +16,14 @@
             </a>
             <h1 class="text-4xl font-bold mb-4">Markovitz Portfolio for Optimal Investment Split</h1>
             <p class="text-xl text-gray-200">
-                Deep learning application for detecting kidney disease abnormalities from CT scan images
+                Portfolio Optimization App for ideal investment allocation across stocks to minimize risk.
             </p>
             <div class="flex gap-4 mt-6">
-                <a href="https://github.com/yourusername/kidney-disease-detection" target="_blank"
+                <a href="https://github.com/pavi2803/Investment_Guide_Markowitz_Portfolio" target="_blank"
                    class="px-6 py-3 bg-white text-slate-800 rounded-lg font-semibold hover:bg-gray-100 transition">
                     View Code on GitHub →
                 </a>
-                <a href="https://kidney-disease-app-latest.onrender.com/" target="_blank"
+                <a href="https://investmentguide-t9jkfnvr3v5dejbtwszqic.streamlit.app/" target="_blank"
                    class="px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold hover:bg-teal-600 transition">
                     Live Demo →
                 </a>
@@ -38,9 +38,9 @@
         <section class="mb-12">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">Overview</h2>
             <p class="text-lg text-gray-700 leading-relaxed">
-                A Streamlit web application that leverages deep learning to detect signs of kidney disease from CT scan images. 
-                Built with TensorFlow and VGG16 transfer learning, this tool serves as a supportive AI assistant for medical 
-                professionals. The application is containerized with Docker and deployed on Render with a CI/CD pipeline using GitHub Actions.
+                Markowitz Portfolio is a framework for investors to assist them in making investing decisions. It builds a portfolio that balances risk and returns.
+                Risk Vs Returns : Markowitz’s modern portfolio theory believes that the investors prefer more returns, and are risk averse.
+                Concept of Diversification: Markowitz portfolio emphasizes of diversification of assets. Assume a basket full of eggs. If the basket is dropped, we would lose all the eggs (A big loss). The investing game works the same way. Imagine if you keep the eggs in different baskets. Even if one basket drops, you still got the others.
             </p>
         </section>
 
@@ -48,13 +48,13 @@
         <section class="mb-12">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">Demo</h2>
             <div class="space-y-4">
-                <img src="kidney1.png" alt="App Interface" 
+                <img src="invest1.png" alt="App Interface" 
                      class="w-full rounded-lg shadow-lg border border-gray-200" />
-                <img src="kidney2.png" alt="Upload and Prediction" 
+                <img src="invest2.png" alt="Optimal Split Result PLot" 
                      class="w-full rounded-lg shadow-lg border border-gray-200" />
             </div>
             <p class="text-sm text-gray-600 mt-2 italic">
-                Screenshots showing the app interface, upload process, and detection results
+                Screenshots showing the app interface, stocks selection, and optimal investment split results:
             </p>
         </section>
 
@@ -63,20 +63,20 @@
             <h2 class="text-2xl font-bold mb-4 text-gray-800">Key Features</h2>
             <div class="grid md:grid-cols-2 gap-4">
                 <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Simple Image Upload</h3>
-                    <p class="text-gray-600">Upload kidney CT scan images in JPG or PNG format for instant analysis</p>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Multi-Stock Selection</h3>
+                    <p class="text-gray-600">Choose from 30+ major stocks across tech, finance, healthcare, and energy sectors</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                    <h3 class="font-semibold text-lg mb-2 text-gray-800">VGG16 Transfer Learning</h3>
-                    <p class="text-gray-600">Leverages pretrained VGG16 model fine-tuned for kidney disease detection</p>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Markowitz Optimization</h3>
+                    <p class="text-gray-600">Uses Modern Portfolio Theory to calculate optimal weights for minimum variance</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Docker Containerization</h3>
-                    <p class="text-gray-600">Fully containerized application for consistent deployment across environments</p>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Real-Time Data Analysis</h3>
+                    <p class="text-gray-600">Fetches historical stock data from Yahoo Finance for accurate calculations</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                    <h3 class="font-semibold text-lg mb-2 text-gray-800">CI/CD Pipeline</h3>
-                    <p class="text-gray-600">Automated build and deployment using GitHub Actions and Docker Hub</p>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Visual Investment Breakdown</h3>
+                    <p class="text-gray-600">Clear bar charts showing recommended allocation percentages for each stock</p>
                 </div>
             </div>
         </section>
@@ -87,38 +87,38 @@
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
                 <ol class="space-y-4">
                     <li class="flex gap-4">
-                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">1</span>
+                        <span class="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-semibold">1</span>
                         <div>
-                            <strong class="text-gray-800">Upload CT Scan</strong>
-                            <p class="text-gray-600">User uploads a kidney CT scan image through the Streamlit interface</p>
+                            <strong class="text-gray-800">Select Stocks</strong>
+                            <p class="text-gray-600">Choose at least 2 stocks from the dropdown menu (AAPL, MSFT, NVDA, etc.)</p>
                         </div>
                     </li>
                     <li class="flex gap-4">
-                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">2</span>
+                        <span class="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-semibold">2</span>
                         <div>
-                            <strong class="text-gray-800">Image Preprocessing</strong>
-                            <p class="text-gray-600">Image is resized to 224x224x3 and normalized for model input</p>
+                            <strong class="text-gray-800">Set Date Range</strong>
+                            <p class="text-gray-600">Define the historical period for analysis using start and end date pickers</p>
                         </div>
                     </li>
                     <li class="flex gap-4">
-                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">3</span>
+                        <span class="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-semibold">3</span>
                         <div>
-                            <strong class="text-gray-800">VGG16 Inference</strong>
-                            <p class="text-gray-600">Fine-tuned VGG16 model analyzes the scan for disease indicators</p>
+                            <strong class="text-gray-800">Data Collection</strong>
+                            <p class="text-gray-600">App downloads historical closing prices from Yahoo Finance and validates data quality</p>
                         </div>
                     </li>
                     <li class="flex gap-4">
-                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">4</span>
+                        <span class="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-semibold">4</span>
                         <div>
-                            <strong class="text-gray-800">Binary Classification</strong>
-                            <p class="text-gray-600">Model outputs prediction: No Kidney Disease or Likely Kidney Disease</p>
+                            <strong class="text-gray-800">Portfolio Optimization</strong>
+                            <p class="text-gray-600">Calculates annualized returns and covariance matrix, then solves for minimum variance portfolio</p>
                         </div>
                     </li>
                     <li class="flex gap-4">
-                        <span class="flex-shrink-0 w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center font-semibold">5</span>
+                        <span class="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-semibold">5</span>
                         <div>
                             <strong class="text-gray-800">Display Results</strong>
-                            <p class="text-gray-600">Results are displayed with clear visual indicators for medical review</p>
+                            <p class="text-gray-600">Shows optimal allocation percentages with visual bar chart for easy interpretation</p>
                         </div>
                     </li>
                 </ol>
@@ -129,22 +129,22 @@
         <section class="mb-12">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">Technical Architecture</h2>
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 class="font-semibold text-lg mb-3 text-gray-800">Model Details</h3>
+                <h3 class="font-semibold text-lg mb-3 text-gray-800">Optimization Model</h3>
                 <ul class="space-y-2 text-gray-700 mb-6">
-                    <li><strong>Base Model:</strong> VGG16 pretrained on ImageNet</li>
-                    <li><strong>Training:</strong> Fine-tuned using transfer learning on kidney CT scans</li>
-                    <li><strong>Framework:</strong> TensorFlow 2.19.0</li>
-                    <li><strong>Input Shape:</strong> 224x224x3 RGB images</li>
-                    <li><strong>Output:</strong> Binary classification (0: No disease, 1: Disease)</li>
+                    <li><strong>Algorithm:</strong> Markowitz Mean-Variance Optimization</li>
+                    <li><strong>Solver:</strong> CVXOPT quadratic programming solver</li>
+                    <li><strong>Objective:</strong> Minimize portfolio variance (risk)</li>
+                    <li><strong>Constraints:</strong> Non-negative weights, sum of weights equals 1</li>
+                    <li><strong>Returns:</strong> Annualized (252 trading days per year)</li>
                 </ul>
 
-                <h3 class="font-semibold text-lg mb-3 text-gray-800">Deployment Pipeline</h3>
+                <h3 class="font-semibold text-lg mb-3 text-gray-800">Data Processing</h3>
                 <ul class="space-y-2 text-gray-700">
-                    <li><strong>Containerization:</strong> Docker with Python 3.12.7 base image</li>
-                    <li><strong>Container Registry:</strong> Docker Hub for image storage</li>
-                    <li><strong>Hosting:</strong> Render web service</li>
-                    <li><strong>CI/CD:</strong> GitHub Actions for automated build and push</li>
-                    <li><strong>Port:</strong> Application runs on port 8080</li>
+                    <li><strong>Data Source:</strong> Yahoo Finance API via yfinance library</li>
+                    <li><strong>Validation:</strong> Automatic detection and handling of missing data</li>
+                    <li><strong>Calculations:</strong> Daily percentage returns converted to annual metrics</li>
+                    <li><strong>Regularization:</strong> Small epsilon added to covariance matrix for numerical stability</li>
+                    <li><strong>Error Handling:</strong> Comprehensive validation at each step with user-friendly messages</li>
                 </ul>
             </div>
         </section>
@@ -154,49 +154,70 @@
             <h2 class="text-2xl font-bold mb-4 text-gray-800">Technologies Used</h2>
             <div class="flex flex-wrap gap-3">
                 <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Python</span>
-                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">TensorFlow</span>
-                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">VGG16</span>
                 <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Streamlit</span>
-                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Docker</span>
-                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">GitHub Actions</span>
-                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Render</span>
-                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Docker Hub</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">NumPy</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Pandas</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">CVXOPT</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">yfinance</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Matplotlib</span>
+                <span class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full font-semibold">Yahoo Finance API</span>
             </div>
         </section>
 
-        <!-- Deployment Steps -->
+        <!-- Mathematical Foundation -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-gray-800">Deployment Workflow</h2>
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Mathematical Foundation</h2>
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <ol class="space-y-3 text-gray-700">
-                    <li><strong>Build Docker Image:</strong><br/>
-                        <code class="bg-gray-100 px-2 py-1 rounded text-sm">docker build -t pavi2803/kidney-disease-app:latest .</code>
-                    </li>
-                    <li><strong>Push to Docker Hub:</strong><br/>
-                        <code class="bg-gray-100 px-2 py-1 rounded text-sm">docker push pavi2803/kidney-disease-app:latest</code>
-                    </li>
-                    <li><strong>Deploy on Render:</strong><br/>
-                        Connect to Docker Hub image with port 8080 configuration
-                    </li>
-                    <li><strong>Automated CI/CD:</strong><br/>
-                        GitHub Actions automatically builds and pushes new images on every push to main branch
-                    </li>
-                </ol>
+                <p class="text-gray-700 mb-4">The app implements Markowitz Portfolio Theory, solving the following optimization problem:</p>
+                <div class="bg-gray-50 p-4 rounded mb-4">
+                    <p class="font-mono text-sm text-gray-800">Minimize: ½ w<sup>T</sup> Σ w</p>
+                    <p class="font-mono text-sm text-gray-800">Subject to: Σw<sub>i</sub> = 1, w<sub>i</sub> ≥ 0</p>
+                </div>
+                <ul class="space-y-2 text-gray-700">
+                    <li><strong>w:</strong> Vector of portfolio weights (allocation percentages)</li>
+                    <li><strong>Σ:</strong> Covariance matrix of asset returns (risk measure)</li>
+                    <li><strong>Objective:</strong> Find weights that minimize overall portfolio variance</li>
+                    <li><strong>Result:</strong> Optimal diversification based on historical correlations</li>
+                </ul>
             </div>
         </section>
 
         <!-- Impact/Results -->
         <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-gray-800">Impact & Results</h2>
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Impact & Benefits</h2>
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
                 <ul class="space-y-2 text-gray-700">
-                    <li>Achieved 95% accuracy using VGG16 transfer learning on kidney CT scan dataset</li>
-                    <li>Binary classification model for kidney disease detection from CT scans</li>
-                    <li>Deployed as accessible web application for medical professionals</li>
-                    <li>Fully automated CI/CD pipeline reduces deployment time from hours to minutes</li>
-                    <li>Docker containerization ensures consistent performance across environments</li>
-                    <li>Serves as a supportive AI tool to assist in medical decision-making</li>
+                    <li>Applies Nobel Prize-winning Modern Portfolio Theory for scientifically-backed investment strategy</li>
+                    <li>Reduces portfolio risk through optimal diversification based on historical correlations</li>
+                    <li>Eliminates guesswork by using mathematical optimization instead of intuition</li>
+                    <li>Supports diverse investment choices across multiple sectors and market caps</li>
+                    <li>Provides instant analysis of complex financial data with clear visualizations</li>
+                    <li>Free and accessible tool for retail investors to implement institutional-grade portfolio optimization</li>
+                    <li>Validates data quality and alerts users to any issues before calculation</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Ideal Use Cases</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Long-Term Investors</h3>
+                    <p class="text-gray-600">Build a diversified portfolio with optimal risk-return balance for retirement or wealth building</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Students & Learners</h3>
+                    <p class="text-gray-600">Understand portfolio theory concepts with hands-on experimentation and real market data</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Financial Advisors</h3>
+                    <p class="text-gray-600">Quick tool for demonstrating diversification benefits to clients with visual results</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Portfolio Rebalancing</h3>
+                    <p class="text-gray-600">Periodically reassess optimal allocations as market conditions and correlations change</p>
+                </div>
             </div>
         </section>
 
